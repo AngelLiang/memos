@@ -101,11 +101,11 @@ var (
 func init() {
 	viper.SetDefault("mode", "dev")
 	viper.SetDefault("driver", "sqlite")
-	viper.SetDefault("port", 8081)
+	viper.SetDefault("port", 8080)
 
 	rootCmd.PersistentFlags().String("mode", "dev", `mode of server, can be "prod" or "dev" or "demo"`)
 	rootCmd.PersistentFlags().String("addr", "", "address of server")
-	rootCmd.PersistentFlags().Int("port", 8081, "port of server")
+	rootCmd.PersistentFlags().Int("port", 8080, "port of server")
 	rootCmd.PersistentFlags().String("data", "", "data directory")
 	rootCmd.PersistentFlags().String("driver", "sqlite", "database driver")
 	rootCmd.PersistentFlags().String("dsn", "", "database source name(aka. DSN)")
